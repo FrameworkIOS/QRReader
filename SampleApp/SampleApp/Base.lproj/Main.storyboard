@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq8-gV-FhD" customClass="QRScannerView" customModule="QRScanner">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq8-gV-FhD" customClass="QRReaderView" customModule="QRReader">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -44,7 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="flashButton" destination="79y-mq-bOP" id="jxg-iE-HM6"/>
-                        <outlet property="qrScannerView" destination="Lq8-gV-FhD" id="mRw-2F-wc5"/>
+                        <outlet property="qrReaderView" destination="Lq8-gV-FhD" id="mRw-2F-wc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
