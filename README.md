@@ -13,10 +13,11 @@ A QR Code Scanning Framework For IOS
 
 - Podfile:
 ```ruby
-  platform :ios, '10.0'
-  pod 'QRReader'
+platform :ios, '10.0'
+
+pod 'QRReader', :git => 'http://github.com/FrameworkIOS/QRReader.git'
 ```
 - then run pod install
 
 ## Usage
-- see the [QRReader]() guide
+- see the [QRReader](https://github.com/FrameworkIOS/QRReader/blob/master/Docs/QrReader.md) guide
