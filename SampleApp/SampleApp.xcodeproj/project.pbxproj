@@ -18,6 +18,7 @@
 		1880865B2740FA26000DED43 /* SampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880865A2740FA26000DED43 /* SampleAppUITestsLaunchTests.swift */; };
 		188086712740FA98000DED43 /* QRReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1880866D2740FA89000DED43 /* QRReader.framework */; };
 		188086722740FA98000DED43 /* QRReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1880866D2740FA89000DED43 /* QRReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		188086752740FC28000DED43 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188086742740FC28000DED43 /* FlashButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		188086582740FA26000DED43 /* SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITests.swift; sourceTree = "<group>"; };
 		1880865A2740FA26000DED43 /* SampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		188086672740FA89000DED43 /* QRReader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QRReader.xcodeproj; path = ../QRReader.xcodeproj; sourceTree = "<group>"; };
+		188086742740FC28000DED43 /* FlashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				188086402740FA26000DED43 /* Assets.xcassets */,
 				188086422740FA26000DED43 /* LaunchScreen.storyboard */,
 				188086452740FA26000DED43 /* Info.plist */,
+				188086742740FC28000DED43 /* FlashButton.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			files = (
 				1880863C2740FA22000DED43 /* ViewController.swift in Sources */,
 				188086382740FA22000DED43 /* AppDelegate.swift in Sources */,
+				188086752740FC28000DED43 /* FlashButton.swift in Sources */,
 				1880863A2740FA22000DED43 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
