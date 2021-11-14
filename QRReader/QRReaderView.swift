@@ -15,6 +15,10 @@ public protocol QRReaderViewDelegate: AnyObject {
     func qrReaderView(_ qrReaderView: QRReaderView, didChangeTorchActive isOn: Bool)
 }
 
+public extension QRReaderViewDelegate {
+    func qrReaderView(_ qrReaderView: QRReaderView, didChangeTorchActive isOn: Bool) {}
+}
+
 @IBDesignable
 public class QRReaderView: UIView {
     public struct Input {
