@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-public enum QRReaderError: Error {
+public enum QRReaderErrors: Error {
     case unauthorized(AVAuthorizationStatus)
     case deviceFailure(DeviceError)
     case readFailure
