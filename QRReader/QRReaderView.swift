@@ -52,7 +52,7 @@ public class QRReaderView: UIView {
     @IBInspectable
     public var isBlurEffectEnabled: Bool = false
     
-    public func configure(delegate: QRScannerViewDelegate, input: Input = .default) {
+    public func configure(delegate: QRReaderViewDelegate, input: Input = .default) {
         self.delegate = delegate
         
         if let focusImage = input.focusImage {
@@ -104,6 +104,24 @@ public class QRReaderView: UIView {
     
     // MARK: - Private Functions
     private weak var delegate: QRReaderViewDelegate?
+    private let metadataQueue = DispatchQueue(label: "metadata.session.qrreader.queue")
+    private let videoDataQueue = DispatchQueue(label: "videoData.session.qrreader.queue")
+    private let session = AVCaptureSession()
+    private var previewLayer: AVCaptureVideoPreviewLayer?
+    private var focusImageView = UIImageView()
+    private var qrCodeImageView = UIImageView()
+    private var metadataOutput = AVCaptureMetadataOutput()
+    private var videoDataOutput = AVCaptureVideoDataOutput()
+    private var metadataOutputEnable = false
+    private var videoDataOutputEnable = false
+    private var torchActiveObservation: NSKeyValueObservation?
+    private var qrCodeImage: UIImage?
+    private lazy var blurEffectView: UIVisualEffectView = {
+        let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        return blurEffectView
+    }()
 
     private enum AuthorizationStatus {
         case authorized, notDetermined, restrictedOrDenied
