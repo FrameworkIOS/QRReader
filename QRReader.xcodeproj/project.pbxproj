@@ -27,6 +27,8 @@
 		185783902740D515003D260B /* QRReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRReader.h; sourceTree = "<group>"; };
 		185783952740D515003D260B /* QRReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1857839A2740D515003D260B /* QRReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderTests.swift; sourceTree = "<group>"; };
+		185783A52740D59F003D260B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		185783A62740D5F5003D260B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		185783832740D515003D260B = {
 			isa = PBXGroup;
 			children = (
+				185783A62740D5F5003D260B /* README.md */,
+				185783A52740D59F003D260B /* .gitignore */,
 				1857838F2740D515003D260B /* QRReader */,
 				185783992740D515003D260B /* QRReaderTests */,
 				1857838E2740D515003D260B /* Products */,
