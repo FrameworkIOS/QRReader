@@ -16,6 +16,8 @@
 		1880864F2740FA26000DED43 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880864E2740FA26000DED43 /* SampleAppTests.swift */; };
 		188086592740FA26000DED43 /* SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188086582740FA26000DED43 /* SampleAppUITests.swift */; };
 		1880865B2740FA26000DED43 /* SampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880865A2740FA26000DED43 /* SampleAppUITestsLaunchTests.swift */; };
+		188086712740FA98000DED43 /* QRReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1880866D2740FA89000DED43 /* QRReader.framework */; };
+		188086722740FA98000DED43 /* QRReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1880866D2740FA89000DED43 /* QRReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,35 @@
 			remoteGlobalIDString = 188086332740FA22000DED43;
 			remoteInfo = SampleApp;
 		};
+		1880866C2740FA89000DED43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188086672740FA89000DED43 /* QRReader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1857838D2740D515003D260B;
+			remoteInfo = QRReader;
+		};
+		1880866E2740FA89000DED43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 188086672740FA89000DED43 /* QRReader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 185783952740D515003D260B;
+			remoteInfo = QRReaderTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		188086732740FA98000DED43 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				188086722740FA98000DED43 /* QRReader.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		188086342740FA22000DED43 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +79,7 @@
 		188086542740FA26000DED43 /* SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188086582740FA26000DED43 /* SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITests.swift; sourceTree = "<group>"; };
 		1880865A2740FA26000DED43 /* SampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		188086672740FA89000DED43 /* QRReader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QRReader.xcodeproj; path = ../QRReader.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188086712740FA98000DED43 /* QRReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +111,12 @@
 		1880862B2740FA22000DED43 = {
 			isa = PBXGroup;
 			children = (
+				188086672740FA89000DED43 /* QRReader.xcodeproj */,
 				188086362740FA22000DED43 /* SampleApp */,
 				1880864D2740FA26000DED43 /* SampleAppTests */,
 				188086572740FA26000DED43 /* SampleAppUITests */,
 				188086352740FA22000DED43 /* Products */,
+				188086702740FA98000DED43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +161,22 @@
 			path = SampleAppUITests;
 			sourceTree = "<group>";
 		};
+		188086682740FA89000DED43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1880866D2740FA89000DED43 /* QRReader.framework */,
+				1880866F2740FA89000DED43 /* QRReaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		188086702740FA98000DED43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +187,7 @@
 				188086302740FA22000DED43 /* Sources */,
 				188086312740FA22000DED43 /* Frameworks */,
 				188086322740FA22000DED43 /* Resources */,
+				188086732740FA98000DED43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +268,12 @@
 			mainGroup = 1880862B2740FA22000DED43;
 			productRefGroup = 188086352740FA22000DED43 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 188086682740FA89000DED43 /* Products */;
+					ProjectRef = 188086672740FA89000DED43 /* QRReader.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				188086332740FA22000DED43 /* SampleApp */,
@@ -225,6 +282,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1880866D2740FA89000DED43 /* QRReader.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = QRReader.framework;
+			remoteRef = 1880866C2740FA89000DED43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1880866F2740FA89000DED43 /* QRReaderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QRReaderTests.xctest;
+			remoteRef = 1880866E2740FA89000DED43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		188086322740FA22000DED43 /* Resources */ = {
