@@ -10,9 +10,9 @@ import AVFoundation
 
 public protocol QRReaderViewDelegate: AnyObject {
     func qrReaderView(_ qrReaderView: QRReaderView, didFailure error: QRReaderErrors)
-    func qrReaderView(_ qrReaderView: QRReaderView, didSuccess code: Bool)
+    func qrReaderView(_ qrReaderView: QRReaderView, didSuccess code: String)
     
-    func qrReaderView(_ qrReaderView: QRReaderView, didChangeTorchActive isOn: String)
+    func qrReaderView(_ qrReaderView: QRReaderView, didChangeTorchActive isOn: Bool)
 }
 
 @IBDesignable
@@ -48,12 +48,28 @@ public class QRReaderView: UIView {
     @IBInspectable
     public var isBlurEffectEnabled: Bool = false
     
-    public func configure(delegate: QRReaderViewDelegate, input: Input = .default) {
+    public func configure(delegate: QRScannerViewDelegate, input: Input = .default) {
         self.delegate = delegate
         
-        if let focusImage = focusImage {
+        if let focusImage = input.focusImage {
             self.focusImage = focusImage
         }
-        
+        if let focusImagePadding = input.focusImagePadding {
+            self.focusImagePadding = focusImagePadding
+        }
+        if let animationDuration = input.animationDuration {
+            self.animationDuration = animationDuration
+        }
+        if let isBlurEffectEnabled = input.isBlurEffectEnabled {
+            self.isBlurEffectEnabled = isBlurEffectEnabled
+        }
+
+        configureSession()
+        addPreviewLayer()
+        setupBlurEffectView()
+        setupImageViews()
     }
+    
+    // MARK: - Private Functions
+    private weak var delegate: QRReaderViewDelegate?
 }
