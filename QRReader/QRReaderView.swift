@@ -8,6 +8,13 @@
 import UIKit
 import AVFoundation
 
+public protocol QRReaderViewDelegate: AnyObject {
+    func qrReaderView(_ qrReaderView: QRReaderView, didFailure error: QRReaderErrors)
+    func qrReaderView(_ qrReaderView: QRReaderView, didSuccess code: Bool)
+    
+    func qrReaderView(_ qrReaderView: QRReaderView, didChangeTorchActive isOn: String)
+}
+
 @IBDesignable
 public class QRReaderView: UIView {
     public struct Input {
@@ -32,5 +39,21 @@ public class QRReaderView: UIView {
     @IBInspectable
     public var focusImage: UIImage?
     
+    @IBInspectable
+    public var focusImagePadding: CGFloat = 8.0
     
+    @IBInspectable
+    public var animationDuraction: Double = 0.5
+    
+    @IBInspectable
+    public var isBlurEffectEnabled: Bool = false
+    
+    public func configure(delegate: QRReaderViewDelegate, input: Input = .default) {
+        self.delegate = delegate
+        
+        if let focusImage = focusImage {
+            self.focusImage = focusImage
+        }
+        
+    }
 }
