@@ -74,6 +74,60 @@ public class QRReaderView: UIView {
         setupImageViews()
     }
     
+    public func startRunning() {
+        guard isAuthorized() else { return }
+        guard !session?.isRunning else { return }
+        videoDataOutputEnable = false
+        metadataOutputEnable = true
+        metadataQueue.async { [weak self] in
+            self?.session.startRunning()
+        }
+    }
+    
+    
+    /* main funcs */
+    private func configureSession() {
+        
+    }
+    
+    private func setupBlurEffectView() {
+        
+    }
+    
+    private func setupImageViews() {
+        
+    }
+    
+    private func addPreviewLayer() {
+        
+    }
+    
     // MARK: - Private Functions
     private weak var delegate: QRReaderViewDelegate?
+
+    private enum AuthorizationStatus {
+        case authorized, notDetermined, restrictedOrDenied
+    }
+    
+    private func isAuthorized() -> Bool {
+        return authorizationStatus == .authorized
+    }
+    
+    private func authorizationStatus() -> AuthorizationStatus {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            return .authorized
+        case .notDetermined:
+            failure(.unauthorized(.notDetermined))
+            return .notDetermined
+        case .denied:
+            failure(.unauthorized(.denied))
+            return .restrictedOrDenied
+        case .restricted:
+            failure(.unauthorized(.restricted))
+            return .restrictedOrDenied
+        @unknown default:
+            return .restrictedOrDenied
+        }
+    }
 }
