@@ -1,0 +1,5 @@
+platform :ios, '10.0'
+
+target 'SampleApp' do
+  pod 'QRReader', :git => 'http://github.com/FrameworkIOS/QRReader.git'
+end

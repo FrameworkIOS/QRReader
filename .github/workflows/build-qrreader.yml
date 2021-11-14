@@ -1,0 +1,16 @@
+name: RestApi Test
+
+on: [push, pull_request]
+
+
+jobs:
+  linuxbuild:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Pod install
+        run: |
+          cd SampleApp/
+          pod install
