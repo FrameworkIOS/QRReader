@@ -11,6 +11,7 @@
 		1857839B2740D515003D260B /* QRReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857839A2740D515003D260B /* QRReaderTests.swift */; };
 		1857839C2740D515003D260B /* QRReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 185783902740D515003D260B /* QRReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		185783A82740D9DC003D260B /* BundleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185783A72740D9DC003D260B /* BundleModule.swift */; };
+		185783AA2740DA1A003D260B /* QRReaderErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185783A92740DA1A003D260B /* QRReaderErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		185783A52740D59F003D260B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		185783A62740D5F5003D260B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		185783A72740D9DC003D260B /* BundleModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleModule.swift; sourceTree = "<group>"; };
+		185783A92740DA1A003D260B /* QRReaderErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				185783902740D515003D260B /* QRReader.h */,
 				185783A72740D9DC003D260B /* BundleModule.swift */,
+				185783A92740DA1A003D260B /* QRReaderErrors.swift */,
 			);
 			path = QRReader;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185783AA2740DA1A003D260B /* QRReaderErrors.swift in Sources */,
 				185783A82740D9DC003D260B /* BundleModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
