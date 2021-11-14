@@ -28,3 +28,51 @@ extension ViewController: QRReaderViewDelegate {
 }
 
 ```
+
+- Flash Button
+```swift
+final class ViewController: UIViewController {
+
+    ...
+
+    @IBOutlet var flashButton: FlashButton!
+
+    @IBAction func tapFlashButton(_ sender: UIButton) {
+        qrReaderView.setTorchActive(isOn: !sender.isSelected)
+    }
+}
+
+extension ViewController: QRReaderViewDelegate {
+
+    ...
+
+    func qrReaderView(_ qrReaderView: QRReaderView, didChangeTorchActive isOn: Bool) {
+        flashButton.isSelected = isOn
+    }
+}
+
+```
+
+- Blur Effect:
+```swift
+     qrReaderView.configure(delegate: self, input: .init(isBlurEffectEnabled: true))
+
+```
+
+- Advance:
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    let qrReaderView = QRReaderView(frame: view.bounds)
+
+    qrReaderView.focusImage = UIImage(named: "scan_qr_focus")
+    qrReaderView.focusImagePadding = 8.0
+    qrReaderView.animationDuration = 0.5
+
+    qrReaderView.configure(delegate: self)
+    view.addSubview(qrReaderView)
+    qrReaderView.startRunning()
+}
+
+```
