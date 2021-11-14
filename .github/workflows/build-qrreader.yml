@@ -10,6 +10,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       
+      - name: Check pod version
+        run: pod --version
+
+      - name: Check swift version
+        run: swift --version
+      
       - name: Pod install
         run: |
           cd SampleApp/
