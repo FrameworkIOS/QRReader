@@ -1,4 +1,4 @@
-name: RestApi Test
+name: Swift
 
 on: [push, pull_request]
 
